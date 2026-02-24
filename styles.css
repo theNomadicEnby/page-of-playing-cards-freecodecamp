@@ -1,0 +1,107 @@
+body {
+  font-family: "Segoe UI";
+  background-color: rgb(88, 180, 120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0; 
+}
+
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  line-height: 0.9;
+}
+
+.left {
+  align-self: flex-start;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.middle {
+  align-self: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.right {
+ align-self: flex-end;
+ transform: rotate(180deg);
+ font-size: 2rem;
+}
+
+.spade {
+  color: black;
+}
+
+.clover {
+  color: black;
+}
+
+.heart, .diamond {
+  color: red;
+}
+
+.middle span:last-child {
+  transform: rotate(180deg);
+}
+
+.card.clover .middle:has(> span:nth-of-type(4)):not(:has(> span:nth-of-type(5))) > span:nth-last-child(-n+2) { 
+  transform: rotate(180deg); 
+}
+
+
+.card.clover:nth-of-type(4) .middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.card.diamond:nth-of-type(5) .middle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  align-items: center;
+  row-gap: 35px;
+  column-gap: 7px;
+}
+
+.card.diamond:nth-of-type(5) .middle span:nth-child(3) {
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+.card.diamond:nth-of-type(5) .middle span:nth-child(4),
+.card.diamond:nth-of-type(5) .middle span:nth-child(5) {
+  transform: rotate(180deg);
+}
