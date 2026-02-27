@@ -1,7 +1,5 @@
 # Page of Playing Cards | Leo M.
 
-Build a Page of Playing Cards
-
 This is the first certification project for freeCodeCamp's [Responsive Web Design Certification](https://www.freecodecamp.org/learn/responsive-web-design-v9/).
 
 This project was built with HTML and CSS.
@@ -12,7 +10,7 @@ Live project link: <https://thenomadicenby.github.io/page-of-playing-cards-freec
 
 ## Screenshot
 
-![markdown-screenshot](./assets/Screenshot%201.png)
+![playing-cards-screenshot](./playingCards.png)
 
 ## Objective
 
